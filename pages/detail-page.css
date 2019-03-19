@@ -1,21 +1,43 @@
 body {
-    background: #FFBA00;
+    background: url("https://backgrounddownload.com/wp-content/uploads/2018/09/art-museum-background.jpg") no-repeat center center fixed;
+    background-size: cover;
     color: #333;
     font-family: 'Inconsolata', monospace;
     text-align: center;
 }
 
-main {
-    width: 90%;
-    margin: auto;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: flex-start;
+#main {
+    text-align: center;
 }
 
 img {
-    max-height: 35rem;
-    max-width: 80%;
+    width: 500px;
+    max-height: 700px;
+    max-width: 100%;
+}
+
+#flexcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 5%;
+}
+
+#content, #comments {
+    box-sizing: border-box;
+    margin-top: 20px;
+    width: 500px;
+}
+
+#content {
+    min-width: 0;
+}
+
+h1 {
+    box-sizing: border-box;
+    border-bottom: 1px solid black;
+    width: 80%;
+    margin: auto;
 }
 
 footer {
@@ -27,13 +49,9 @@ footer {
 #comments {
     background-color: #eee;
     border: 1px solid #333;
-    max-width: 80%;
-    margin: auto;
     padding: 3%;
-    box-sizing: border-box;
-    margin-top: 5%;
     font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+    text-align: left;
 }
 
 .comment {
@@ -52,13 +70,9 @@ footer {
 
 form {
     background-color: #eee;
-    border: 1px solid #333;
-    text-align: left;
-    max-width: 80%;
-    margin: auto;
-    padding: 3%;
-    box-sizing: border-box;
+    text-align: left;   
     margin-top: 5%;
+    width: 400px;
 }
 
 form input {
@@ -72,12 +86,9 @@ form textarea {
 }
 
 .formSection {
-    margin: 10px;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-.button {
-    margin: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 button {
@@ -86,4 +97,10 @@ button {
     border-radius: 5px;
     color: white;
     padding: 5px;
+    font-size: 100%;
+    transition: all .2s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.1);
 }
