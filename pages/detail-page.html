@@ -6,21 +6,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Een vrolijke vioolspeler</title>
   <link rel="stylesheet" type="text/css" href="detail-page.css">
+  <script src="detail-page.js"></script>
 </head>
 <body>
   <main>
     <p><i>Ben's Mobile Museum App</i></p>
     <h1>Een vrolijke vioolspeler, Gerard van Honthorst, 1623</h1>
     <div id="flexcontainer">
-        <section id='content'>
-            <img src="https://lh3.googleusercontent.com/V3sjNgCA_Jssjm0sTKaPZeOwCv_vAPpjllrAF-yAB8UkqIlc6UX_jxJmxH_axVHTHxlK1E7Slecg8K5bIvSbDlw0zg=s0">
-        </section>
+      <section id='content'>
+        <img src="https://lh3.googleusercontent.com/V3sjNgCA_Jssjm0sTKaPZeOwCv_vAPpjllrAF-yAB8UkqIlc6UX_jxJmxH_axVHTHxlK1E7Slecg8K5bIvSbDlw0zg=s0">
+      </section>
       <section id='comments'>
-          <h2>Comments</h2>
-          
-          <section class='comment'>
-          </section>
-          <form>
+        <h2>Comments</h2>
+            <form onsubmit="submitComment(); return false">
               <div class="formSection">
                 <label for="name">Name:</label>
                 <input type="text" id="name">
@@ -34,9 +32,7 @@
               </div>
             </form>
         </section>
-  </div>
-
+    </div>
   </main> 
-
 </body>
 </html>
