@@ -341,7 +341,6 @@ const validations = function(index) {
 
 function getYear(index) {
     const yearText = index.longTitle
-    console.log(yearText);
     let year = "";
     for(let i = 0; i < yearText.length; i++) {
         if("1234567890".includes(yearText.charAt(i)) && year.length < 4) {
@@ -371,7 +370,6 @@ function createAllImages() {
     paintings.forEach(function(index) {
        const img = index.webImage;
        if(validations(index)) {
-           console.log(index.longTitle);
            createImage(img.url);
        }
     })
