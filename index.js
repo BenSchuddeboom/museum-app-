@@ -326,6 +326,36 @@ const data = {
 
 const paintings = data.artObjects;
 
+const validations = function(index) {
+    getYear(index);
+    if (index.principalOrFirstMaker.includes("Honthorst")) {
+        return false;
+    } else if (index.webImage.width < 500) {
+        return false;
+    } else if (getYear(index)){
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function getYear(index) {
+    const yearText = index.longTitle
+    console.log(yearText);
+    let year = "";
+    for(let i = 0; i < yearText.length; i++) {
+        if("1234567890".includes(yearText.charAt(i)) && year.length < 4) {
+            year += (yearText.charAt(i));
+        }
+    }
+    parseInt(year);
+    if (year < 1800) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 function createImage(imgUrl) {
     const gallery = document.getElementById("gallery");
     const link = document.createElement("a")
@@ -335,11 +365,15 @@ function createImage(imgUrl) {
     img.setAttribute("class", "artObject");
     link.appendChild(img);
     gallery.appendChild(link);
-  }
+}
 
 function createAllImages() {
     paintings.forEach(function(index) {
-        createImage(index.webImage.url);
+       const img = index.webImage;
+       if(validations(index)) {
+           console.log(index.longTitle);
+           createImage(img.url);
+       }
     })
 }
 
