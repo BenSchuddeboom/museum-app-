@@ -1,4 +1,3 @@
-
 function submitComment() {
     const inputField = document.getElementById('name');
     const name = inputField.value;
